@@ -1,0 +1,9 @@
+requests
+pandas
+numpy
+cryptography
+PyJWT
+matplotlib
+SQLAlchemy
+flask
+ccxt
