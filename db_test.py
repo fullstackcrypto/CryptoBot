@@ -1,20 +1,23 @@
-import os
+# db_test.py
+
 import psycopg2
-from dotenv import load_dotenv
+from config import DATABASE  # Assuming the database connection settings are in config.py
 
-# Load environment variables from .env file
-load_dotenv()
+def connect_db():
+    try:
+        conn = psycopg2.connect(
+            dbname=DATABASE['dbname'],
+            user=DATABASE['user'],
+            password=DATABASE['password'],
+            host=DATABASE['host'],
+            port=DATABASE['port']
+        )
+        print("Connected to the database successfully.")
+        return conn
+    except Exception as e:
+        print(f"Failed to connect to the database: {e}")
+        return None
 
-# Get the database URL from the environment variables
-database_url = os.getenv("DATABASE_URL")
-
-try:
-    # Parse the DATABASE_URL and establish a connection
-    conn = psycopg2.connect(database_url)
-    print("Connected to the database successfully!")
-    
-    # Close the connection
-    conn.close()
-
-except Exception as e:
-    print(f"Failed to connect to the database: {e}")
+# Test connection
+if __name__ == "__main__":
+    connect_db()
