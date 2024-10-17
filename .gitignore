@@ -2,3 +2,5 @@
 DATABASE_URL
 cryptobot-env/
 venv/
+node_modules/
+cdp_api_key.json

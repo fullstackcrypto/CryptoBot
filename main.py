@@ -1,16 +1,44 @@
-# main.py
-import data_handler
-from trading_bot import run_bot
+import os
+import logging
+from coinbase.wallet.client import Client  # Importing the correct Coinbase client
+from dotenv import load_dotenv
 
-def main():
-    print("Starting CryptoBot...")
+# Load environment variables from .env
+load_dotenv()
+
+# Logging configuration
+logging.basicConfig(
+    filename=os.getenv("TRADE_LOG_PATH", "./logs/trade.log"),
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+def generate_jwt():
+    # JWT generation logic if required
+    return os.getenv("COINBASE_API_KEY")
+
+def initialize_client():
+    api_key = os.getenv("COINBASE_API_KEY")
+    api_secret = os.getenv("COINBASE_API_SECRET")
     
-    # Fetch data (if this is part of the logic)
-    data = data_handler.fetch_data()
-    print("Data fetched:", data)
+    if not api_key or not api_secret:
+        logging.error("Missing `api_key` or `api_secret`.")
+        raise ValueError("API key or secret is missing.")
     
-    # Run the bot continuously (60s intervals)
-    run_bot()
+    client = Client(api_key, api_secret)
+    return client
 
 if __name__ == "__main__":
-    main()  # Call the main function which includes all necessary logic
+    logging.info("Starting CryptoBot...")
+
+    try:
+        jwt_token = generate_jwt()
+        logging.info(f"JWT generated: {jwt_token}")
+
+        # Initialize Coinbase client
+        client = initialize_client()
+        logging.info("Coinbase client initialized successfully.")
+
+        # Further bot logic here...
+    except Exception as e:
+        logging.error(f"An error occurred in main: {e}")

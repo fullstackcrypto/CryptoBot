@@ -1,0 +1,11 @@
+2024-10-16 18:01:59,261 - INFO - Starting CryptoBot...
+2024-10-16 18:01:59,266 - INFO - JWT generated: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvcmdhbml6YXRpb25zLzY4NDg5NzM5LTZhZDQtNGE0MS1iNzY4LWJjMmZmOTljZTU5Zi9hcGlLZXlzL2Q4MDc3NjJhLWQ1MTItNGQ1MS1hNzU4LWVmOTVkOWVhMGE1OSIsImlhdCI6MTcyOTEyNjkxOSwiZXhwIjoxNzI5MTI3MjE5fQ.W4WcR7ZjqjzF8z--ET-SiWl-hfePJPr6Ee7aPrxipmS3NqG5u1TnVBd2XEvc5d0Oq6pdJPSidhTT74zR4bG59g
+2024-10-16 18:01:59,267 - ERROR - Error initializing client: Missing `api_key`.
+2024-10-16 18:01:59,267 - ERROR - An error occurred in main: Missing `api_key`.
+2024-10-16 18:15:39,932 - INFO - Starting CryptoBot...
+2024-10-16 18:15:39,937 - INFO - JWT generated: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvcmdhbml6YXRpb25zLzY4NDg5NzM5LTZhZDQtNGE0MS1iNzY4LWJjMmZmOTljZTU5Zi9hcGlLZXlzL2Q4MDc3NjJhLWQ1MTItNGQ1MS1hNzU4LWVmOTVkOWVhMGE1OSIsImlhdCI6MTcyOTEyNzczOSwiZXhwIjoxNzI5MTI4MDM5fQ.7HwfHxr87utdWaEJ8WNVRA0-BtytBXXkKaVmGyrOdsi34CFCslbsYdDisuOanNw4zqN-A7q4jdGirVOgV7aaqg
+2024-10-16 18:15:39,937 - ERROR - Error initializing client: Missing `api_key`.
+2024-10-16 18:15:39,937 - ERROR - An error occurred in main: Missing `api_key`.
+2024-10-16 18:19:02,599 - INFO - Starting CryptoBot...
+2024-10-16 18:19:02,599 - INFO - JWT generated: your_actual_api_key
+2024-10-16 18:19:02,600 - INFO - Coinbase client initialized successfully.
